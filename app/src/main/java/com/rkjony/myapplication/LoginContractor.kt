@@ -10,5 +10,10 @@ class LoginContractor {
 
     interface Presenter{
         fun loginButtonPressed()
+
+    }
+
+    interface Model{
+        fun callLoginApi(userName:String,password:String)
     }
 }

@@ -3,28 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".LoginActivity">
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/ed_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="@string/ask_for_number"
-        android:inputType="phone"
-        />
+        android:inputType="phone" />
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/ed_pass"
-        android:hint="@string/ask_for_password"
-        android:inputType="numberPassword"
-        />
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/ask_for_password"
+        android:inputType="numberPassword" />
+
+    <Button
         android:id="@+id/btn_login"
-        android:text="@string/login_btn_text"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{presenter::loginButtonPressed}"
+        android:text="@string/login_btn_text" />
 
 </LinearLayout>
+

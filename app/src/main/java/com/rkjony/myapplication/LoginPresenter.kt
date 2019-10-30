@@ -1,16 +1,11 @@
 package com.rkjony.myapplication
 
-class LoginPresenter(private val view: LoginContractor.View):LoginContractor.Presenter{
+class LoginPresenter(private val view: LoginContractor.View) : LoginContractor.Presenter {
+
+    private val model: LoginModel = LoginModel(view)
 
     override fun loginButtonPressed() {
-        val name  = view.getUserName()
-        val pass = view.getPassword()
-
-        if (name == "123" && pass == "23"){
-            view.showRight()
-        }else{
-            view.showWrong()
-        }
+        model.callLoginApi(view.getUserName(), view.getPassword())
     }
 
 }

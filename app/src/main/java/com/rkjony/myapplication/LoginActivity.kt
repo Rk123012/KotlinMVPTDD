@@ -7,11 +7,12 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(),LoginContractor.View{
 
-    private var loginPresenter:LoginPresenter = LoginPresenter(this)
+    private lateinit var  loginPresenter:LoginPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        loginPresenter = LoginPresenter(this)
         btn_login.setOnClickListener { loginPresenter.loginButtonPressed() }
     }
 
@@ -30,4 +31,5 @@ class LoginActivity : AppCompatActivity(),LoginContractor.View{
     override fun showWrong() {
         Toast.makeText(this,"Baler mota kala",Toast.LENGTH_SHORT).show()
     }
+
 }
