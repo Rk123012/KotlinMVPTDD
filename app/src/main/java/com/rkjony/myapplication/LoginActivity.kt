@@ -25,11 +25,11 @@ class LoginActivity : AppCompatActivity(),LoginContractor.View{
     }
 
     override fun showRight() {
-        Toast.makeText(this,"Thanks mota kala mehedy",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,"Login Successful",Toast.LENGTH_SHORT).show()
     }
 
     override fun showWrong() {
-        Toast.makeText(this,"Baler mota kala",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,"Login Failed",Toast.LENGTH_SHORT).show()
     }
 
 }
